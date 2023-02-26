@@ -20,7 +20,7 @@ public class AnimateSlowDown : MonoBehaviour
     void Update()
     {
         cam.orthographicSize = Mathf.Lerp(5,2,delta);
-        Time.timeScale = Mathf.Lerp(1,0.1f,delta);
+        Time.timeScale = Mathf.Lerp(0.8f,0.1f,delta);
         vignette.transform.localScale = Vector3.Lerp(Vector3.one*5,Vector3.one/2,delta);
         vigSprite.color = Color.Lerp(new Color(0,0,0,0), new Color(0,0,0,1), delta);
         delta -= Time.deltaTime*2;

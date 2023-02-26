@@ -9,15 +9,20 @@ public class Reselect : MonoBehaviour
     void Start()
     {
         inputField.ActivateInputField();
+            inputField.Select();
+
     }
     private void Update() {
         if (Time.timeScale>0.05f)
         {
+        inputField.ActivateInputField();
             inputField.Select();
         }
     }
     public void ReSelect()
     {
         inputField.ActivateInputField();
+            inputField.Select();
+
     }
 }

@@ -14,7 +14,7 @@ public class GenerateObstacles : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        latestPos = 0;
+        latestPos = 3;
     }
 
     // Update is called once per frame
