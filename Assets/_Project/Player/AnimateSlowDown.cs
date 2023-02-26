@@ -19,8 +19,8 @@ public class AnimateSlowDown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float speeddelta = transform.position.x / 400;
-        float maxSpeed = Mathf.Lerp(.5f,1.2f, speeddelta);
+        float speeddelta = transform.position.x / 600;
+        float maxSpeed = Mathf.Lerp(.5f,1.5f, speeddelta);
         cam.orthographicSize = Mathf.Lerp(5,2,delta);
         Time.timeScale = Mathf.Lerp(maxSpeed,0.1f,delta);
         vignette.transform.localScale = Vector3.Lerp(Vector3.one*5,Vector3.one/2,delta);

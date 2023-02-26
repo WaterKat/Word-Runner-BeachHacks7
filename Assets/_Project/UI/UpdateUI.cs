@@ -19,8 +19,8 @@ public class UpdateUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        jumpText.text = hwscript.jump;
-        duckText.text = hwscript.duck;
+        jumpText.text = hwscript.jump.ToLower();
+        duckText.text = hwscript.duck.ToLower();
         if (kickText!=null)
             kickText.text = hwscript.kick;
     }

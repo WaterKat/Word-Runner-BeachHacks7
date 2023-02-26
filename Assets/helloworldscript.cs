@@ -33,18 +33,18 @@ public class helloworldscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (input == jump)
+        if (input.ToLower().Contains(jump.ToLower()))
         {
             jumpEvent.Invoke();
             WordReroll();
         }
-        else if (input == kick)
+        else if (input.ToLower().Contains(kick.ToLower()))
         {
             kickEvent.Invoke();
             WordReroll();
 
         }
-        else if (input == duck)
+        else if (input.ToLower().Contains(duck.ToLower()))
         {
             duckEvent.Invoke();
             WordReroll();
