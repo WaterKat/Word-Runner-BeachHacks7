@@ -627,6 +627,7 @@ MonoBehaviour:
   generateDistance: 5
   terrains:
   - {fileID: 3246842507160358572, guid: c1dfebe35df25264a9b413af37dcff42, type: 3}
+  - {fileID: 3246842507160358572, guid: cee7554510d92624da2be760936b3dac, type: 3}
 --- !u!4 &722917840
 Transform:
   m_ObjectHideFlags: 0
