@@ -27,12 +27,7 @@ public class helloworldscript : MonoBehaviour
         {
             listofWords.Add(item);
         }
-        jump = (string)listofWords[Random.Range(0, listofWords.Count)];
-        kick = (string)listofWords[Random.Range(0, listofWords.Count)];
-        duck = (string)listofWords[Random.Range(0, listofWords.Count)];
-        Debug.Log("kick: " + kick);
-        Debug.Log("jump: " + jump);
-        Debug.Log("duck: " + duck);
+        WordReroll();
     }
 
     // Update is called once per frame
@@ -41,15 +36,24 @@ public class helloworldscript : MonoBehaviour
         if (input == jump)
         {
             jumpEvent.Invoke();
+            WordReroll();
         }
         else if (input == kick)
         {
             kickEvent.Invoke();
+            WordReroll();
+
         }
-        else
+        else if (input == kick)
         {
             duckEvent.Invoke();
+            WordReroll();
         }
+    }
+
+    public void UpdateInput(string _input)
+    {
+        input = _input;
     }
 
     public void WordReroll()

@@ -6,7 +6,18 @@ using TMPro;
 public class Reselect : MonoBehaviour
 {
     public TMP_InputField inputField;
-    public void OnInspectorUpdate() {
-        inputField.Select();
+    void Start()
+    {
+        inputField.ActivateInputField();
+    }
+    private void Update() {
+        if (Time.timeScale>0.05f)
+        {
+            inputField.Select();
+        }
+    }
+    public void ReSelect()
+    {
+        inputField.ActivateInputField();
     }
 }

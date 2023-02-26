@@ -12,6 +12,7 @@ public class DuckScript : MonoBehaviour
     public void Duck()
     {
         rb2d.velocity = new Vector2(rb2d.velocity.x, -duckForce);
-        audioSource?.Play();
+        if (audioSource.clip!=null) 
+           audioSource?.Play();
     }
 }
