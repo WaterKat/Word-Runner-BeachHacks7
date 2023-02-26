@@ -15,6 +15,5 @@ public class JumpScript : MonoBehaviour
     {
         rb2d.velocity = new Vector2(rb2d.velocity.x, jumpforce);
         audioSource?.Play();
-
     }
 }
