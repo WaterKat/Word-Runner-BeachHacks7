@@ -26,4 +26,9 @@ public class AnimateSlowDown : MonoBehaviour
         delta -= Time.deltaTime*2;
         delta = Mathf.Clamp01(delta);
     }
+
+    public void OnDied()
+    {
+        this.enabled = false;
+    }
 }
