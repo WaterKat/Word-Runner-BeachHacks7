@@ -626,8 +626,11 @@ MonoBehaviour:
   latestPos: 0
   generateDistance: 5
   terrains:
-  - {fileID: 3246842507160358572, guid: c1dfebe35df25264a9b413af37dcff42, type: 3}
   - {fileID: 3246842507160358572, guid: cee7554510d92624da2be760936b3dac, type: 3}
+  - {fileID: 3246842507160358572, guid: c1dfebe35df25264a9b413af37dcff42, type: 3}
+  - {fileID: 3246842507160358572, guid: c1dfebe35df25264a9b413af37dcff42, type: 3}
+  - {fileID: 3246842507160358572, guid: c1dfebe35df25264a9b413af37dcff42, type: 3}
+  - {fileID: 3246842507160358572, guid: c1dfebe35df25264a9b413af37dcff42, type: 3}
 --- !u!4 &722917840
 Transform:
   m_ObjectHideFlags: 0
@@ -909,7 +912,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 885d618946bbea64db7cac0ea462b535, type: 3}
   m_Color: {r: 0.38904706, g: 0.7830189, b: 0.75593334, a: 1}
   m_FlipX: 0
