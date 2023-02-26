@@ -44,7 +44,7 @@ public class helloworldscript : MonoBehaviour
             WordReroll();
 
         }
-        else if (input == kick)
+        else if (input == duck)
         {
             duckEvent.Invoke();
             WordReroll();
