@@ -16,6 +16,8 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        if (Time.timeScale < 0.1f)
+            return;
         while (Mathf.Abs(target.position.x - (transform.position.x+offset_x) )  > 2)
         {
             transform.position += new Vector3(Mathf.Sign(target.position.x - (transform.position.x+offset_x) ) * Time.deltaTime, 0, 0 );
