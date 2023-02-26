@@ -8,7 +8,7 @@ public class SaveScoreOnDeath : MonoBehaviour
     public ScoreKeeping scoreKeepingScript;
     public TMP_InputField inputField;
     public LoadScene sceneLoadScript;
-    
+
     int score = 0;
 
     [ContextMenu("ForceDeath")]
@@ -17,6 +17,7 @@ public class SaveScoreOnDeath : MonoBehaviour
         scoreKeepingScript.enabled = false;
         score = scoreKeepingScript.score;
         inputField.gameObject.SetActive(true);
+        inputField.Select();
     }
 
     public void InputValueChanged(string _input){

@@ -6,4 +6,6 @@ using UnityEngine.Events;
 public class DeathScript : MonoBehaviour
 {
     public UnityEvent OnDeath;
+
+    public void Kill() => OnDeath.Invoke();
 }

@@ -29,7 +29,9 @@ public class AnimateSlowDown : MonoBehaviour
 
     public void OnDied()
     {
-        Time.timeScale = 0.01f;
+        delta = 1;
+        Update();
+        Time.timeScale = 0.001f;
         this.enabled = false;
     }
 }
