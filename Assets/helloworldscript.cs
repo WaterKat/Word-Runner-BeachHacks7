@@ -12,7 +12,7 @@ public class helloworldscript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        string[] lines = System.IO.File.ReadAllLines(@"Assets/_Project/message.txt");
+        var lines = System.IO.File.ReadLines(@"Assets/message.txt");
         int randomNum = Random.Range(0,50);
         foreach (var item in lines) 
         {
