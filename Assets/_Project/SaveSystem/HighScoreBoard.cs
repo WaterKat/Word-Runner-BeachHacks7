@@ -16,6 +16,10 @@ public class HighScoreBoard
     {
         if (scoreRecords == null)
             scoreRecords = new List<Record>();
+        if (name.Length < 1)
+            name = "Anon";
+        if (score == 0)
+            return;
         scoreRecords.Add(new Record(name, score));
     }
 
