@@ -6,11 +6,11 @@ public class JumpScript : MonoBehaviour
 {
     public Rigidbody2D rb2d;
 
-    public float jumpforce = 5;
+    public float jumpforce;
 
     [ContextMenu("JumpNow")]
     public void Jump()
     {
-        rb2d.velocity += Vector2.up * jumpforce;
+        rb2d.velocity = new Vector2(rb2d.velocity.x, jumpforce);
     }
 }

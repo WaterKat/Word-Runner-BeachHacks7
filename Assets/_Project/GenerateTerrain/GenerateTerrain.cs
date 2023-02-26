@@ -44,7 +44,7 @@ public class GenerateTerrain : MonoBehaviour
     void Generate()
     {
         int seed = latestPos;
-        GameObject randomGO = Instantiate(terrains[Random.Range(0, terrains.Count - 1)]);
+        GameObject randomGO = Instantiate(terrains[Random.Range(0, terrains.Count)]);
         randomGO.transform.position = new Vector3((latestPos + 1) * generateDistance, GetRandomHeight(seed), 0);
         Destroy(randomGO, 15);
     }

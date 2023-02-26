@@ -226,6 +226,7 @@ GameObject:
   - component: {fileID: 2190587137426342138}
   - component: {fileID: 7896215805594302449}
   - component: {fileID: 119639299644572837}
+  - component: {fileID: 7043732543183177159}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -273,8 +274,8 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!114 &1013264604279286204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96b5cdb0686c43d4d84986db7016a2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
   direction: {x: 1, y: 0}
   rb2d: {fileID: 6554950639800534943}
   collider: {fileID: 7896215805594302449}
@@ -304,7 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 6554950639800534943}
-  jumpforce: 5
+  jumpforce: 20
 --- !u!58 &7896215805594302449
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -337,6 +338,20 @@ MonoBehaviour:
   vignette: {fileID: 0}
   vigSprite: {fileID: 0}
   delta: 0
+--- !u!114 &7043732543183177159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445124171437268826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bf6b22e18166cc4a8f09dd922825d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2d: {fileID: 6554950639800534943}
+  duckForce: 30
 --- !u!1 &2042061281332746552
 GameObject:
   m_ObjectHideFlags: 0

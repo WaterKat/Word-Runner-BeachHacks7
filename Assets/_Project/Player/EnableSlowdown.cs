@@ -8,7 +8,7 @@ public class EnableSlowdown : MonoBehaviour
         AnimateSlowDown slowdownScript = other.gameObject.GetComponent<AnimateSlowDown>();
         if (slowdownScript!=null)
         {
-            slowdownScript.delta+=Time.deltaTime*10;
+            slowdownScript.delta+=Time.deltaTime*20;
         }
     }
 }

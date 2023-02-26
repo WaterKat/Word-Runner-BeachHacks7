@@ -35,7 +35,7 @@ public class GenerateObstacles : MonoBehaviour
         int seed = latestPos;
         if (Random.Range(0,3)>0)
             return;
-        GameObject randomGO = Instantiate(obstacles[Random.Range(0,obstacles.Count-1)]);
+        GameObject randomGO = Instantiate(obstacles[Random.Range(0,obstacles.Count)]);
         randomGO.transform.position = new Vector3((latestPos+1)*generateDistance, terrainScript.GetRandomHeight(seed)+1f, 0);
         Destroy(randomGO, 30);
     }
