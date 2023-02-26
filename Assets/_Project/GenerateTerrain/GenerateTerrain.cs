@@ -36,7 +36,7 @@ public class GenerateTerrain : MonoBehaviour
         {
             randomPos.Add(_input, Random.Range(-0.1f, 0.1f));
         }
-        Debug.Log(_input + " " + randomPos[_input]);
+       // Debug.Log(_input + " " + randomPos[_input]);
         return randomPos[_input];
         
     }

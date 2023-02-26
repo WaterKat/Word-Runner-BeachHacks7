@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AnimateSlowDown : MonoBehaviour
 {
+
     public Camera cam;
     public GameObject vignette;
     public SpriteRenderer vigSprite;
@@ -22,5 +23,7 @@ public class AnimateSlowDown : MonoBehaviour
         Time.timeScale = Mathf.Lerp(1,0.25f,delta);
         vignette.transform.localScale = Vector3.Lerp(Vector3.one*5,Vector3.one/2,delta);
         vigSprite.color = Color.Lerp(new Color(0,0,0,0), new Color(0,0,0,1), delta);
+        delta -= Time.deltaTime;
+        delta = Mathf.Clamp01(delta);
     }
 }
