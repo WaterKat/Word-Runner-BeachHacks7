@@ -11,10 +11,10 @@ public class helloworldscript : MonoBehaviour
     public UnityEvent kickEvent;
     public UnityEvent duckEvent;
 
-    string jump;
-    string kick;
-    string duck;
-    string input;
+    public string jump;
+    public string kick;
+    public string duck;
+    public string input;
     // Start is called before the first frame update
     List<string> listofWords = new List<string>();
 
