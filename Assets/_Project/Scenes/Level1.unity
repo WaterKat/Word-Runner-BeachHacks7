@@ -850,7 +850,6 @@ GameObject:
   - component: {fileID: 1508014917}
   - component: {fileID: 1508014919}
   - component: {fileID: 1508014918}
-  - component: {fileID: 1508014921}
   - component: {fileID: 1508014920}
   m_Layer: 5
   m_Name: Text (TMP)
@@ -990,21 +989,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 1445124169873400458}
   gui: {fileID: 1508014918}
-  score: 0
---- !u!114 &1508014921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508014916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbe5d7efa433238439b75112745a5983, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTransform: {fileID: 0}
-  gui: {fileID: 0}
   score: 0
 --- !u!1 &1619895421
 GameObject:
