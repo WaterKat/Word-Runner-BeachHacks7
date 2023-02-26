@@ -32,7 +32,7 @@ public class HighScoreBoard
         {
             for (int j = i; j < scoreRecords.Count; j++)
             {
-                if (scoreRecords[j].score < scoreRecords[i].score)
+                if (scoreRecords[j].score > scoreRecords[i].score)
                 {
                     Record temp = scoreRecords[i];
                     scoreRecords[i] = scoreRecords[j];
