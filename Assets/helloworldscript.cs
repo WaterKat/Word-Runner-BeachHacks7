@@ -7,6 +7,7 @@ using System.IO;
 
 public class helloworldscript : MonoBehaviour
 {
+    public TextAsset textFile;
     public UnityEvent jumpEvent;
     public UnityEvent kickEvent;
     public UnityEvent duckEvent;
@@ -14,18 +15,16 @@ public class helloworldscript : MonoBehaviour
     public string jump;
     public string kick;
     public string duck;
-    public string input;
+    public string input_text;
     // Start is called before the first frame update
-    List<string> listofWords = new List<string>();
+    [SerializeField] List<string> listofWords = new List<string>();
 
     void Start()
     {
-
-        var lines = System.IO.File.ReadLines(@"Assets/message.txt");
-        //foreach (var item in lines) {Debug.Log(item);}
-        foreach (var item in lines)
+        listofWords = new List<string>(textFile.text.Split('\n'));
+        for (int i = 0; i < listofWords.Count; i++)
         {
-            listofWords.Add(item);
+            listofWords[i] = listofWords[i].ToLower().Trim();
         }
         WordReroll();
     }
@@ -33,18 +32,25 @@ public class helloworldscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (input.ToLower().Contains(jump.ToLower()))
+        input_text = input_text.ToLower();
+        Debug.Log("input_text "+input_text+" "+input_text.Length);
+        Debug.Log("jump_text "+jump+" "+jump.Length);
+
+
+        if (input_text.Contains(jump))
         {
+            Debug.Log(input_text);
+
             jumpEvent.Invoke();
             WordReroll();
         }
-        else if (input.ToLower().Contains(kick.ToLower()))
+        else if (input_text.Contains(kick))
         {
             kickEvent.Invoke();
             WordReroll();
 
         }
-        else if (input.ToLower().Contains(duck.ToLower()))
+        else if (input_text.Contains(duck))
         {
             duckEvent.Invoke();
             WordReroll();
@@ -53,13 +59,13 @@ public class helloworldscript : MonoBehaviour
 
     public void UpdateInput(string _input)
     {
-        input = _input;
+        input_text = _input.ToLower();
     }
 
     public void WordReroll()
     {
-        jump = (string)listofWords[Random.Range(0, listofWords.Count)];
-        kick = (string)listofWords[Random.Range(0, listofWords.Count)];
-        duck = (string)listofWords[Random.Range(0, listofWords.Count)];
+        jump = listofWords[Random.Range(0, listofWords.Count-1)].ToLower();
+        kick = listofWords[Random.Range(0, listofWords.Count-1)].ToLower();
+        duck = listofWords[Random.Range(0, listofWords.Count-1)].ToLower();
     }
 }

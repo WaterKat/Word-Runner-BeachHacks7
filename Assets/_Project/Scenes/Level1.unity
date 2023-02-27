@@ -1439,6 +1439,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1479036650083089860, guid: c1156d1f3052b8c428f9f076e9a2ac0c, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1479036650083089860, guid: c1156d1f3052b8c428f9f076e9a2ac0c, type: 3}
       propertyPath: m_Volume
       value: 0.525
       objectReference: {fileID: 0}
@@ -2167,6 +2171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccfd1a7f98ba345cfb4270447f6be554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textFile: {fileID: 4900000, guid: 5890c5242fe83df4c968dbc00ea17cf7, type: 3}
   jumpEvent:
     m_PersistentCalls:
       m_Calls:
@@ -2203,7 +2208,8 @@ MonoBehaviour:
   jump: 
   kick: 
   duck: 
-  input: 
+  input_text: 
+  listofWords: []
 --- !u!4 &1476560800
 Transform:
   m_ObjectHideFlags: 0

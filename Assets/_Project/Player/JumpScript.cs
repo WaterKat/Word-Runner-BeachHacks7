@@ -13,6 +13,7 @@ public class JumpScript : MonoBehaviour
     [ContextMenu("JumpNow")]
     public void Jump()
     {
+        Debug.Log("jumped");
         rb2d.velocity = new Vector2(rb2d.velocity.x, jumpforce);
         if (audioSource.clip!=null) 
             audioSource?.Play();

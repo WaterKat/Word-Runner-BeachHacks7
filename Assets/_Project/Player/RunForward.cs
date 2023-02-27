@@ -8,7 +8,7 @@ public class RunForward : MonoBehaviour
     public Vector2 direction = Vector2.right;
     [SerializeField] Rigidbody2D rb2d;
 
-    [SerializeField] Collider2D collider;
+    //[SerializeField] Collider2D collider;
 
     // Start is called before the first frame update
     void Start()
